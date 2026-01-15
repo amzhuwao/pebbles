@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pebbles | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Baloo+2:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <div class="branding">
+          <div class="logo">Pebbles</div>
+          <div class="tagline">Elementary School</div>
+        </div>
+        <nav class="main-nav" aria-label="Primary">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Toggle navigation"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="nav-menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#academics">Academics</a></li>
+            <li><a href="index.html#admissions">Admissions</a></li>
+            <li><a href="life.html">Life at School</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="parents.html">Parents</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn primary" href="contact.html">Enroll Now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section muted">
+        <div class="container two-col">
+          <div>
+            <p class="eyebrow">Contact us</p>
+            <h1>We would love to meet you</h1>
+            <p>
+              Reach out with questions, book a tour, or request more
+              information. We respond within one school day.
+            </p>
+            <div class="contact-card card">
+              <p><strong>Phone:</strong> (555) 123-4567</p>
+              <p><strong>Email:</strong> hello@pebbles-school.edu</p>
+              <p><strong>Office hours:</strong> Mon–Fri, 8:00 AM – 4:00 PM</p>
+              <p><strong>Address:</strong> 123 Pebble Lane, Sunnybrook</p>
+            </div>
+            <div
+              class="map"
+              role="img"
+              aria-label="Map showing Pebbles Elementary"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=900&q=80"
+                alt="Map placeholder"
+              />
+            </div>
+          </div>
+          <div class="card form-card">
+            <h3>Send a message</h3>
+            <form action="contact.php" method="POST">
+              <label for="parent-name">Your Name</label>
+              <input id="parent-name" name="name" type="text" required />
+
+              <label for="parent-email">Email</label>
+              <input id="parent-email" name="email" type="email" required />
+
+              <label for="child-age">Child's Age</label>
+              <select id="child-age" name="age">
+                <option value="5-6">5–6</option>
+                <option value="7-8">7–8</option>
+                <option value="9-10">9–10</option>
+                <option value="11-12">11–12</option>
+              </select>
+
+              <label for="message">How can we help?</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+
+              <button class="btn primary" type="submit">Send Message</button>
+            </form>
+            <div class="newsletter">
+              <h4>Join our newsletter</h4>
+              <p>Monthly updates on events, tips, and classroom highlights.</p>
+              <div class="input-group">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  aria-label="Newsletter email"
+                />
+                <button class="btn ghost" type="button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">Pebbles</div>
+          <p>Bright, caring learning for ages 5–12.</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul class="mini-list">
+            <li><a href="index.html#admissions">Admissions</a></li>
+            <li><a href="life.html">Life at School</a></li>
+            <li><a href="parents.html">Parents</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>123 Pebble Lane, Sunnybrook</p>
+          <p>Mon–Fri, 8:00 AM – 4:00 PM</p>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        © 2026 Pebbles Elementary School. All rights reserved.
+      </p>
+    </footer>
+
+    <div class="floating-mascot" aria-hidden="true">★</div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
