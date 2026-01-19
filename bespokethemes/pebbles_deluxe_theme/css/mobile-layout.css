@@ -1,0 +1,355 @@
+@media (max-width: 1450px) {
+	.header-details,.slideshow-wrapper,.page-main-page .sj-content-row {
+		max-width: 80%;
+	}
+	.nav > ul > li > a {
+		font-size: 15px;
+	}
+}
+@media (max-width: 1400px) {
+	.school-details .site-name-strap .theme-site-name {
+		font-size: 26px;
+	}
+	.school-details .site-name-strap .theme-strap-line {
+		font-size: 21px;
+	}
+	.header-wrapper .school-details .theme-school-logo img {
+		max-width: 80px;
+	}
+	.school-details .site-name-strap {
+		margin-left: 10px;
+	}
+	.slideshow-wrapper .slideshow-content .theme-school-logo img {
+		width: 150px;
+	}
+	.slideshow-wrapper .slideshow-content h5 {
+		font-size: 36px;
+	}
+	.slideshow-wrapper .slideshow-content h1 {
+		font-size: 50px;
+	}
+	.site_quicklinks .theme-social {
+		width: 60px;
+	}
+	.site_quicklinks .info-btn,.site_quicklinks .theme-social > a {
+		width: 60px;
+		height: 60px;
+		font-size: 22px;
+	}
+	.nav > ul > li > a {
+		font-size: 14px;
+		padding: 5px 7.5px;
+	}
+	.nav > ul > li > ul > li a {
+		font-size: 16px;
+		padding: 10px;
+	}
+	.nav > ul > li ul {
+		width: 250px;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-2 .element-text h1 {
+		font-size: 40px;
+		line-height: 50px;
+		margin-bottom: 15px;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-2 .element-text ul {
+		margin-top: 15px;
+	}
+	.page-main-page .sj-outer-row-3 h3,h2.contact {
+		font-size: 40px;
+	}
+	.page-main-page:not(.cms_edit) .sj-outer-row-2 .column .element-image img {
+		max-height: 170px;
+	}
+	.page-main-page:not(.cms_edit) .sj-outer-row-2 .column .element-image .sj_element_image_caption {
+		font-size: 28px;
+	}
+}
+@media (max-width: 1280px) {
+	.school-details .site-name-strap .theme-site-name {
+		font-size: 18px;
+	}
+	.school-details .site-name-strap .theme-strap-line {
+		font-size: 14px;
+	}
+	.header-details .right-box {
+		padding: 0px 10px;
+	}
+	.header-wrapper .school-details .theme-school-logo img {
+		max-width: 70px;
+	}
+	.slideshow-wrapper .slideshow-content .theme-school-logo img {
+		width: 100px;
+	}
+	.slideshow-wrapper .slideshow-content h5 {
+		font-size: 28px;
+	}
+	.slideshow-wrapper .slideshow-content h1 {
+		font-size: 40px;
+	}
+	.site_quicklinks .theme-social {
+		width: 55px;
+	}
+	.site_quicklinks .info-btn,.site_quicklinks .theme-social > a {
+		width: 55px;
+		height: 55px;
+		font-size: 21px;
+	}
+	.nav > ul > li > a {
+		font-size: 12px;
+	}
+	.nav > ul > li > ul > li a {
+		font-size: 12px;
+		padding: 7.5px;
+	}
+	.nav > ul > li ul {
+		width: 225px;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-1 .element-image {
+		padding: 40px;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-2 .element-text ul li a {
+		font-size: 18px;
+	}
+	.footer-images .slick-slide {
+		margin: 0px 50px;
+	}
+	body:not(.page-main-page) .content-wrapper {
+		padding: 25px 50px;
+	}
+	body:not(.page-main-page) .header-inner {
+		padding: 0 50px;
+	}
+	.page-main-page:not(.cms_edit) .sj-outer-row-2 .column .element-image {
+		flex: 0 0 calc(25% - 22.5px);
+		width: calc(25% - 22.5px);
+		margin: 0 15px;
+	}
+	.page-main-page:not(.cms_edit) .sj-outer-row-2 .column .element-image .sj_element_image_caption {
+		font-size: 24px;
+	}
+	.slideshow-wrapper:after {
+		left: -50px;
+		bottom: -60px;
+		width: 250px;
+		height: 250px;
+	}
+	#theme-slideshow-captions {
+		font-size: 17px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		bottom: 5%;
+		font-weight: 500;
+	}
+}
+@media (max-width: 1024px) {
+	.popup-box {
+		width: 90%;
+		max-width: 90%;
+	}
+	.header-details .right-box {
+		display: none;
+	}
+	.header-details .nav-mobile {
+		display: flex;
+		align-items: center;
+		padding: 0;
+		align-self: stretch;
+	}
+	.slideshow-wrapper .slideshow-content .theme-school-logo {
+		display: none;
+	}
+	.header-details,.slideshow-wrapper,.page-main-page .sj-content-row,.footer-inner {
+		max-width: 100%;
+		padding: 0px 25px;
+	}
+	.footer-inner {
+		padding: 0;
+	}
+	.header-wrapper .school-details {
+		max-width: 85%;
+		width: 85%;
+	}
+	.page-main-page .sj-content-row-1 {
+		flex-wrap: wrap;
+	}
+	.slideshow-wrapper:after {
+		display: none;
+	}
+	.site_quicklinks {
+		position: relative;
+		transform: none;
+		top: unset;
+		padding: 0 25px;
+		z-index: 0;
+	}
+	.site_quicklinks .site_quicklinks_inner {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		padding: 25px 0;
+	}
+	.site_quicklinks .info-btn:first-child {
+		border-bottom-left-radius: 12px;
+	}
+	.site_quicklinks .theme-social {
+		display: inline-flex;
+		width: auto;
+		border-radius: unset;
+		border-top-right-radius: 12px;
+		border-bottom-right-radius: 12px;
+	}
+	.site_quicklinks .theme-social > a {
+		display: inline-flex;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-1 .element-image {
+		padding: 20px;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-2 .element-text h1 {
+		font-size: 36px;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-2 .element-text ul li a {
+		font-size: 16px;
+	}
+	.page-main-page .sj-outer-row-3 h3,h2.contact {
+		font-size: 36px;
+	}
+	.header-wrapper .school-details .theme-school-logo img {
+		max-width: 60px;
+	}
+	.slideshow-wrapper .slideshow-content h5 {
+		font-size: 24px;
+	}
+	.slideshow-wrapper .slideshow-content h1 {
+		font-size: 36px;
+	}
+	.page-main-page .sj-outer-row-1 {
+		padding: 30px 0;
+	}
+	.page-main-page .sj-outer-row-3 {
+		padding: 50px 0;
+	}
+	.footer-container {
+		height: auto;
+		margin-bottom: 0;
+	}
+	.footer-left {
+		position: relative;
+		top: unset;
+		transform: none;
+		left: unset;
+		width: 100%;
+		border-radius: 0;
+	}
+	.footer-container #footer_map {
+		position: relative;
+		right: unset;
+		top: unset;
+		transform: none;
+		width: 100%;
+	}
+	.footer-images {
+		padding: 15px 0;
+	}
+	.footer-container #footer_map .element .leaflet-container {
+		height: 250px !important;
+	}
+	.footer-images .slick-slide {
+		margin: 0px 30px;
+		max-height: 80px;
+		width: auto;
+		object-fit: contain;
+	}
+	.copyright {
+		padding: 10px;
+		font-size: 12px;
+	}
+	body:not(.page-main-page) .content-wrapper {
+		padding: 15px 35px;
+	}
+	body:not(.page-main-page) .header-inner {
+		padding: 0;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-1 .element-image .sj_element_image img {
+		width: 100%;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-1 .element-image:after {
+		display: none;
+	}
+	.page-main-page:not(.cms_edit) .sj-outer-row-2 .column .element-image {
+		flex: 0 0 calc(50% - 20px);
+		width: calc(50% - 20px);
+		margin: 10px!important;
+	}
+	.page-main-page .sj-content-row-1 .column-2col-1 .element-image .sj_element_image:before {
+		width: 90px;
+		height: 90px;
+	}
+	.page-main-page .content-inner {
+		padding: 40px 15px 0;
+	}
+	.footer-container #footer_map:before,.footer-container #footer_map:after {
+		display: none;
+	}
+	.footer-left:before {
+		bottom: calc(100% - 5px);
+		width: 50px;
+		height: 50px;
+		left: 5px;
+	}
+	.info-bar p, .info-bar a {
+		font-size: 15px;
+	}
+	.info-bar {
+		padding: 15px 50px 15px 15px;
+	}
+	.info-bar i.info-close {
+		right: 15px;
+	}
+	.info-bar .search input {
+		max-width: 175px;
+	}
+	.info-bar .search input,.info-bar .search button,.goog-te-gadget .goog-te-combo {
+		height: 30px !important;
+	}
+	.info-bar .search button {
+		padding: 5px 15px 5px 12.5px;
+		font-size: 12px;
+	}
+}
+@media (max-width: 767px) {
+	.page-main-page:not(.cms_edit) .sj-outer-row-2 .column .element-image {
+		flex: 0 0 100%;
+		width: 100%;
+		margin: 0 !important;
+		margin-bottom: 15px !important;
+	}
+	.page-main-page:not(.cms_edit) .sj-outer-row-2 .column .element-image:last-child {
+		margin-bottom: 0;
+	}
+	.page-main-page .sj-outer-row-3 h3,h2.contact {
+		font-size: 32px;
+	}
+	.slideshow-wrapper .slideshow-content h5 {
+		font-size: 17px;
+		margin-bottom: 0;
+	}
+	.slideshow-wrapper .slideshow-content h1 {
+		font-size: 21px;
+	}
+	.site_quicklinks .info-btn,.site_quicklinks .theme-social > a {
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+	#theme-slideshow-captions {
+		font-size: 12px;
+	}
+	.header-wrapper .school-details .theme-school-logo img {
+		max-width: 55px;
+	}
+	.school-details .site-name-strap {
+		margin-left: 0;
+	}
+}

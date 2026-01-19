@@ -1,0 +1,787 @@
+html,body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	background: none;
+	background-size: auto;
+	position: static !important;
+	line-height: 1.4;
+	-ms-overflow-style: scrollbar;
+}
+div {
+	box-sizing: border-box;
+}
+.wrapper {
+	width: 100%;
+	position: relative;
+}
+.inner {
+	margin: 0 auto;
+	position: relative;
+	max-width: 100%;
+}
+.ie8 .inner {
+	max-width: none;
+	width: 100%;
+}
+.cleaner {
+	clear: both;
+	float: none !important;
+}
+.page {
+	max-width: none;
+	min-width: 0;
+}
+.school-details {
+	padding: 15px;
+}
+.bar-wrapper {
+	clear: both;
+}
+.page .bar {
+	padding: 5px 15px;
+	position: relative;
+}
+.page .bar:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.page .bar > div {
+	float: left;
+}
+.page .bar .school-address {
+	width: 100%;
+}
+.page .bar.address-social-bar .school-address {
+	width: 65%;
+}
+.page .bar.address-social-bar .theme-social {
+	width: 35%;
+	text-align: right;
+}
+.box-container > div {
+	display: block;
+}
+.full-width {
+	width: 100% !important;
+	max-width: none !important;
+}
+.has-side-menu .content {
+	width: 70%;
+	float: left;
+}
+/* COLUMNS */
+.has-side-menu .column-1col,.column-1col {
+	width: 100%;
+}
+.has-side-menu .column-2col-1,.column-2col-1 {
+	width: 50%;
+}
+.has-side-menu .column-2col-2,.column-2col-2 {
+	width: 50%;
+}
+.has-side-menu .column-left2col-1,.column-left2col-1 {
+	width: 66.6%;
+}
+.has-side-menu .column-left2col-2,.column-left2col-2 {
+	width: 33.4%;
+}
+.has-side-menu .column-right2col-1,.column-right2col-1 {
+	width: 33.4%;
+}
+.has-side-menu .column-right2col-2,.column-right2col-2 {
+	width: 66.6%;
+}
+.has-side-menu .column-3col-1,.column-3col-1 {
+	width: 33.3%;
+}
+.has-side-menu .column-3col-2,.column-3col-2 {
+	width: 33.3%;
+}
+.has-side-menu .column-3col-3,.column-3col-3 {
+	width: 33.3%;
+}
+.has-side-menu .column,.column {
+	float: left;
+	margin: 0;
+	padding: 15px;
+}
+/* END OF COLUMNS */
+.page img {
+	max-width: 100%;
+	height: auto;
+}
+.nav_hidden,.nav_mobile,.copyright br {
+	display: none;
+}
+.school-address {
+	padding: 15px 0;
+}
+.school-address.with-dividers p {
+	position: relative;
+	padding: 0 5px;
+}
+.school-address.with-dividers p:after {
+	content: "|";
+	position: absolute;
+	left: -5px;
+}
+.school-address.with-dividers p.theme-address {
+	padding-left: 0;
+}
+.school-address.with-dividers p.theme-address:after {
+	display: none;
+}
+.school-address.with-prefixes p.theme-telephone:before {
+	content: "Tel: ";
+}
+.school-address.with-prefixes p.theme-fax:before {
+	content: "Fax: ";
+}
+.school-address.with-prefixes p.theme-email:before {
+	content: "Email: ";
+}
+.school-address.with-prefixes p.theme-headteacher:before {
+	content: "Headteacher: ";
+}
+.school-address p {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 5px 0 0;
+}
+.school-address p a {
+	color: inherit;
+}
+.school-address.listed p {
+	display: block;
+}
+.theme-site-name,.theme-strap-line {
+	margin: 0;
+	padding: 0;
+}
+.theme-school-logo,.school-name {
+	display: inline-block;
+	vertical-align: middle;
+}
+/* SLIDESHOW */
+#theme-slideshow {
+	clear: both;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+#theme-slideshow img {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#theme-slideshow-captions {
+	position: absolute;
+	bottom: 1%;
+	left: 1%;
+	padding: 10px;
+	font-size: 26px;
+	color: #ffffff;
+	font-weight: bold;
+	width: 98%;
+	line-height: normal;
+	text-align: left;
+	text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+	z-index: 3;
+	opacity: .75;
+}
+.theme-slideshow-caption {
+	position: absolute;
+	bottom: 0;
+}
+/* END OF SLIDESHOW */
+.boxes {
+	margin: 10px;
+}
+.boxes .theme-google-translate {
+	float: left;
+}
+.boxes .search {
+	float: right;
+}
+select.goog-te-combo::-ms-expand {
+	display: none;
+}
+.goog-te-gadget .goog-te-combo {
+	margin: 4px 0;
+	padding: 5px 5px;
+	width: 185px;
+	border: 1px solid #d6d6d6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: #ffffff url(https://static.schooljotter2.com/img/bespoke/coppicev_2019/arrow_img.png) 160px center no-repeat;
+}
+.search .site-search,.page-Generated-search input {
+	background: white;
+	border: 1px solid #cccccc;
+	outline: none;
+	border-right: none;
+	padding: 4px;
+	box-shadow: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-appearance: none;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	height: 32px !important;
+	line-height: normal;
+}
+.search .btn,.page-Generated-search .content .btn {
+	background: white;
+	padding: 4px;
+	border: 1px solid #cccccc;
+	border-left: none;
+	outline: none;
+	box-shadow: none;
+	-webkit-border-radius: 0px;
+	/*ipad border 0 fix*/
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	height: 32px !important;
+	line-height: normal;
+	margin-left:-1px;
+}
+div.slicknav_menu {
+	background: #6c799c;
+}
+a.slicknav_btn {
+	background: #6c799c;
+}
+.text-center {
+	text-align: center;
+}
+.school-details .school-name,.school-details .theme-school-logo {
+	display: inline-block;
+	vertical-align: middle;
+}
+/* NAVIGATION */
+/*MENU*/
+.nav {
+	position: relative;
+	z-index: 601;
+	opacity: 0;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+.nav.fixed {
+	position: fixed;
+	top: 0;
+	z-index: 555;
+}
+.sj_admin .nav.fixed {
+	top: 60px;
+}
+.nav > ul {
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	color: black;
+}
+.nav li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	margin: 0 5px;
+	position: relative;
+	vertical-align: middle;
+}
+.nav a {
+	padding: 8px 10px;
+	text-decoration: none;
+	display: inline-block;
+	color: black;
+}
+.nav ul ul {
+	display: none;
+	position: absolute;
+	width: 170px;
+	top: 100%;
+	padding: 0;
+	left: 0;
+	background-color: #afafaf;
+	z-index: 1;
+}
+.nav ul ul li {
+	background: inherit;
+}
+.nav ul ul li a {
+	display: block;
+	width: 100%;
+}
+.nav > ul > li.last-item > ul,.nav > ul > li.extra.more > ul {
+	right: 0;
+	left: auto;
+	transform: none;
+}
+.nav ul ul li {
+	display: block;
+	margin: 0;
+}
+.nav ul ul ul {
+	top: 0;
+	left: 100%;
+}
+.nav ul ul ul.left, .nav .left ul {
+	left: -100%;
+}
+/* END OF NAVIGATION */
+/* SIDE NAVIGATION */
+.has-side-menu .content {
+	float: left;
+	width: 70%;
+	padding-top: 0;
+}
+.sidenav {
+	float: left;
+	width: 30%;
+	position: relative;
+	z-index: 555;
+	background: #a3a3a3;
+}
+.sidenav ul {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.sidenav ul ul {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	display: none;
+	width: 100%;
+}
+/*.sidenav ul li:hover > ul {
+	display: block;
+}
+*/
+.sidenav.verticalClick ul li:hover > ul {
+	display: none;
+}
+.sidenav.verticalClick li.current > ul {
+	display: block !important;
+}
+.sidenav.verticalClick ul ul {
+	position: relative;
+	left: 0;
+}
+.sidenav ul ul.left,.sidenav ul ul.left ul {
+	left: -100%;
+}
+.sidenav.verticalClick ul ul li {
+	padding-left: 5px;
+}
+.sidenav.verticalClick li.current > ul {
+	display: block;
+}
+.sidenav li {
+	list-style-type: none;
+	width: 100%;
+	position: relative;
+	background: #a3a3a3;
+}
+.sidenav a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 8px 15px;
+	color: white;
+	text-decoration: none;
+}
+/* END OF SIDE NAVIGATION */
+/* CONTENT */
+.content-wrapper {
+	min-height: 100%;
+}
+.content-inner {
+	padding: 15px;
+	min-height: 400px;
+}
+.sj_element_news ul {
+	padding-left: 0;
+}
+.element {
+	margin-bottom: 20px;
+}
+.cms_edit .sj_element_embed {
+	padding:10px;
+}
+/* NEWS */
+.sj_element_newsletters ul {
+	padding-left: 0;
+}
+.sj_element_newsletters ul li {
+	list-style-type: none;
+}
+.sj_element_news ul li a,.sj_element_events dl.sj_events dt,.sj_element_newsletters strong {
+	color: inherit;
+	font-weight: bold;
+	font-size: 16px;
+}
+.sj_element_newsletters strong a {
+	color: inherit;
+}
+.sj_element_news ul li,.sj_element_events dl.sj_events dd,.sj_element_newsletters p {
+	font-weight: normal;
+	font-size: 14px;
+}
+/* END OF NEWS */
+.page-Generated-search .content,.page-Generated-news .sj_element_news,.page-Generated-calendar #calendar {
+	padding: 15px;
+}
+/* END OF CONTENT */
+/* FOOTER */
+.awards {
+	padding: 20px;
+	text-align: center;
+}
+.awards img {
+	height: 80px;
+	width: auto;
+	display: inline-block;
+	margin: 0 10px;
+}
+.copyright {
+	background: #000000;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+.copyright a {
+	color: inherit;
+}
+/* END OF FOOTER */
+/* FIXES */
+/* SEARCH FIX */
+.page-Generated-search .content h2,.page-Generated-search .content p {
+	padding: 0px 15px;
+}
+.page-Generated-search .content > form {
+	padding: 15px;
+}
+/* END OF SEARCH FIX */
+/* FIX FOR NEWS PAGE */
+.page-Generated-news .content td {
+	vertical-align: top !important;
+	padding-right: 10px;
+}
+.page-Generated-news .content .search td {
+	padding-right: 0;
+}
+/* END OF FIX FOR NEWS PAGE */
+/* FIX FOR SLIDESHOW Z-INDEX */
+.ie8 .sj_element_slideshow div.cycle > div {
+	height: 100% !important;
+	min-height: 100px;
+}
+.sj_element_slideshow div.cycle > div {
+	z-index: 0 !important;
+	filter: none!important;
+	background: transparent !important;
+}
+/* END OF FIX FOR SLIDESHOW Z-INDEX */
+/* MAP FIX */
+.page .element-map img {
+	width: auto;
+	max-width: inherit;
+}
+.page .element-map {
+	position: relative;
+	z-index: 0;
+}
+/* END OF MAP FIX */
+/* IE8 FIXES */
+.ie8 .fc-header,.ie8 .fc-header tbody,.ie8 .fc-header tr {
+	display: block;
+}
+.ie8 .fc-header td {
+	display: inline-block !important;
+	width: 33%;
+}
+.ie8 .sj_element_slideshow div.cycle div {
+	width: 100% !important;
+}
+.ie8 .goog-te-gadget img {
+	width: 38px;
+	height: 12px;
+}
+.ie8 .wrapper img {
+	width: auto;
+}
+.ie8 .goog-te-banner-frame {
+	width: 100%;
+	height: 38px;
+}
+.ie8 #goog-gt-tt {
+	display: none;
+}
+.ie8 body {
+	top: 0 !important;
+}
+.ie8 body.sj_preview > .skiptranslate {
+	height: 38px;
+}
+.ie8 .search .site-search {
+	line-height: 18px;
+}
+.ie8 .page-Generated-search .content.inner input {
+	float: left;
+}
+.ie8 .page-Generated-search .content.inner form {
+	overflow: auto;
+	padding-left: 5px;
+}
+.ie8 .search .site-search,.ie8 .btn,.ie8 .page-Generated-search .content.inner input {
+	height: 27px;
+}
+.ie8 .btn {
+	line-height: 20px;
+}
+.ie8 .frame img {
+	width: auto
+}
+/* END OF IE8 FIXES */
+.element-text table {
+	width: 100%;
+	table-layout: fixed;
+}
+.sj_element_events dl.sj_events dt small {
+	border: 0;
+}
+.page-Generated-search .content input {
+	margin-left: -4px;
+	float: left;
+}
+.page-Generated-search .content form {
+	margin-bottom: 20px;
+}
+.page-Generated-news .sj_element_news,.page-Generated-calendar #calendar {
+	padding: 15px;
+}
+/* END OF FIXES */
+.fc-event-container > * {
+	z-index: 0;
+}
+.ie8 .sj_element_slideshow div.cycle * {
+	width: auto !important;
+	height: 100% !important;
+}
+.ie8 .sj_element_slideshow div.cycle > div {
+	right: 0;
+}
+.ie8 .nav > ul li.extra.more ul li ul,.ie8 .nav > ul li.last-item ul li ul{
+	left:-100%;
+}
+.sj_element_news ul.pagination li,.sj_element_news ul.pagination li a {
+	font-size: 12px;
+}
+.has-side-menu .sj_element_news .pagination-showing {
+	font-size: 0.8em;
+}
+.sj_element_news .bs3-text-right.pagination-showing {
+	text-align: left;
+}
+.sj_element_slideshow {
+	max-width: 930px;
+	margin: 0 auto;
+}
+/* Date counter widget */
+.date-box{
+	display: none;
+	min-width: 100px;
+	min-height: 40px;
+	background: #000;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	font-weight: bold;
+	font-size: 28px;
+	border-radius: 10px;
+	padding: 20px 35px;
+	position: fixed;
+	top:80px;
+	right: 60px;
+	z-index: 999;
+	text-align: center;
+}
+.ie8 .date-box{
+	background: #000;
+}
+.date-box #counter{
+	font-size: 38px;
+	line-height: 38px;
+	display: block;
+	padding: 15px 0;
+	color: #BBFF3C;
+}
+.date-box .close{
+	position: absolute;
+	right:0;
+	top:0;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 7px;
+	color: #fff;
+	opacity: 0.7;
+}
+.date-box .close:hover{
+	opacity: 1;
+}
+.date-box .contact_text{
+	font-size: 13px;
+	max-width: 250px;
+	margin: 0 auto;
+}
+.leaflet-bottom, .leaflet-top {
+	z-index: 400;
+}
+.ie8 .nav ul.offset-right > li> ul{
+	left: -100%;
+}
+.column .cms-element-handle{
+	z-index:602;
+}
+.sj_element_not_found,.sj_element_please_choose,.sj_element_processing,.cms-element-placeholder{
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight:400;
+}
+@media(max-width: 1024px) {
+	.date-box {
+		display: none !important;
+	}
+	.column .fc-header td {
+		display: table-cell !important;
+		width: auto;
+		text-align: center;
+	}
+	.column .fc-header td, .column .fc-header tr, .column .fc-header th {
+		display: inline-block !important;
+		width: 100%;
+		text-align: center;
+	}
+	.element-text table,.element-text tbody,.element-text th,.element-text tr,.element-text td{
+		height: auto !important;
+	}
+	/* .element-text table,.element-text tr,.element-text td,*/
+	.nav_mobile,.page {
+		display: block;
+	}
+	.sj_element_news .bs3-col-lg-3 {
+		width: 100%;
+	}
+	.school-address.with-dividers p:after {
+		display: none;
+	}
+	.column {
+		width: 100% !important;
+	}
+	.content {
+		width: 100% !important;
+	}
+	.nav,.sidenav {
+		display: none !important;
+		min-height: 0 !important;
+	}
+	.nav_mobile {
+		margin: 10px 0;
+		display: block;
+	}
+	.inner,.wrapper {
+		width: 100% !important;
+		min-width: 0;
+	}
+	.school-name {
+		position: relative;
+		display: block;
+		left: 0;
+		top: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.school-address {
+		text-align: center;
+	}
+	.school-address p {
+		display: block;
+	}
+	.school-address.with-diviers p:after {
+		display: none;
+	}
+	.theme-social {
+		text-align: center;
+	}
+	.school-details .theme-school-logo,.school-details .school-name {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.sj_element_slideshow div {
+		width: 100% !important;
+		background: none !important;
+	}
+	.sj_element_slideshow div.cycle div img {
+		width: auto !important;
+		height: auto !important;
+	}
+	.page .bar .theme-social,.page .bar .school-address {
+		line-height: normal !important;
+		text-align: center;
+		float: none;
+		max-width: none;
+	}
+	.school-name,.theme-school-logo {
+		display: block;
+		max-width: 100%;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		padding: 10px;
+	}
+	.boxes > div {
+		float: none !important;
+		text-align: center;
+	}
+	.search form {
+		display: inline-block;
+	}
+}
+@media (max-width: 630px) {
+	.column .fc-header td {
+		display: block !important;
+		width: 100%;
+	}
+	.page-Generated-news .content td {
+		display: block;
+	}
+}
+@media (max-width: 450px){
+	td.fc-header-left{
+		display: none;
+	}
+	td.fc-header-center,td.fc-header-right{
+		width:50%;
+	}
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A warm, modern elementary school website that welcomes families and inspires young learners."
+    />
+    <meta
+      name="keywords"
+      content="elementary school, enrollment, tour, admissions, kids education"
+    />
+    <title>Pebbles Elementary School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Baloo+2:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <div class="branding">
+          <div class="logo">Pebbles</div>
+          <div class="tagline">Elementary School</div>
+        </div>
+        <nav class="main-nav" aria-label="Primary">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Toggle navigation"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="life.html">Life at School</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="parents.html">Parents</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn primary" href="contact.html">Enroll Now</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Image Slider Section (Oak-inspired) -->
+      <section id="home" class="slider-hero">
+        <div class="slider-container">
+          <div class="slide active">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&h=500&q=80"
+              alt="Pebbles Elementary School"
+            />
+            <div class="slide-overlay">
+              <div class="container slide-content">
+                <h1>Where curiosity sparkles and every child feels at home.</h1>
+                <p>
+                  Pebbles Elementary blends joyful learning with proven
+                  academics, small classes, and a caring team dedicated to every
+                  child.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1427504494785-cdaf0707f0e4?auto=format&fit=crop&w=1200&h=500&q=80"
+              alt="Classroom learning"
+            />
+            <div class="slide-overlay">
+              <div class="container slide-content">
+                <h1>Rigorous, playful, and personalized learning</h1>
+                <p>
+                  From early literacy to hands-on STEM, our curriculum invites
+                  questions, creativity, and confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&h=500&q=80"
+              alt="Student activities"
+            />
+            <div class="slide-overlay">
+              <div class="container slide-content">
+                <h1>Growing together as a community</h1>
+                <p>
+                  Family partnerships, inclusive community, and safety always at
+                  the heart of everything we do.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-next" onclick="changeSlide(1)">❯</button>
+        <div class="slider-dots">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+      </section>
+
+      <!-- Welcome Section (Oak-inspired) -->
+      <section class="welcome-section">
+        <div class="container">
+          <div class="welcome-header">
+            <h2>Welcome to Pebbles Elementary</h2>
+            <p class="subtitle">Warm. Safe. Inspiring.</p>
+          </div>
+          <p class="welcome-text">
+            Founded in 2008, Pebbles Elementary grew from a small community
+            classroom to a vibrant campus serving ages 5–12. We blend
+            research-backed teaching with playful experiences so students feel
+            known, challenged, and joyful. Our teachers build trusting
+            relationships, celebrate every milestone, and partner closely with
+            families.
+          </p>
+
+          <!-- Quick Links (Oak-inspired) -->
+          <div class="quick-links-section">
+            <h3>Quick Links</h3>
+            <div class="quick-links">
+              <a href="#academics" class="quick-link-card">
+                <span class="link-icon">📚</span>
+                <span>Academics</span>
+              </a>
+              <a href="#admissions" class="quick-link-card">
+                <span class="link-icon">📋</span>
+                <span>Admissions</span>
+              </a>
+              <a href="parents.html" class="quick-link-card">
+                <span class="link-icon">👥</span>
+                <span>Parents</span>
+              </a>
+              <a href="contact.html" class="quick-link-card">
+                <span class="link-icon">✉️</span>
+                <span>Contact Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- News Section (Oak-inspired) -->
+      <section class="news-section">
+        <div class="container">
+          <h2>Latest News</h2>
+          <div class="news-grid">
+            <article class="news-card">
+              <div class="news-image">
+                <img
+                  src="https://images.unsplash.com/photo-1427504494785-cdaf0707f0e4?auto=format&fit=crop&w=400&q=80"
+                  alt="Classroom News"
+                />
+              </div>
+              <h3>Spring Semester Highlights</h3>
+              <p>
+                Our spring semester is filled with exciting learning projects,
+                outdoor adventures, and special events. Students are diving into
+                new STEM challenges and creative projects.
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </article>
+
+            <article class="news-card">
+              <div class="news-image">
+                <img
+                  src="https://images.unsplash.com/photo-1517486808906-f3fc6476c7a4?auto=format&fit=crop&w=400&q=80"
+                  alt="School Event"
+                />
+              </div>
+              <h3>Community Family Day</h3>
+              <p>
+                Join us for our annual Family Day celebration! Enjoy games,
+                performances, food, and quality time together as a school
+                community.
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </article>
+
+            <article class="news-card">
+              <div class="news-image">
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+                  alt="Achievement"
+                />
+              </div>
+              <h3>Student Achievement Awards</h3>
+              <p>
+                Celebrating our students' incredible achievements across
+                academics, arts, athletics, and community service. We're proud
+                of every milestone!
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section container two-col">
+        <div>
+          <p class="eyebrow">About the school</p>
+          <h2>Mission, vision, values</h2>
+          <p>
+            We nurture confident, kind, and curious learners through a
+            whole-child approach that balances academics, creativity, and
+            character. Our teachers build trusting relationships, celebrate
+            every milestone, and partner closely with families.
+          </p>
+          <div class="pill-grid">
+            <div class="pill">Kindness first</div>
+            <div class="pill">Curiosity daily</div>
+            <div class="pill">Safety always</div>
+            <div class="pill">Family partnership</div>
+            <div class="pill">Inclusive community</div>
+          </div>
+        </div>
+        <div class="card highlight">
+          <h3>Our story</h3>
+          <p>
+            Founded in 2008, Pebbles Elementary grew from a small community
+            classroom to a vibrant campus serving ages 5–12. We blend
+            research-backed teaching with playful experiences so students feel
+            known, challenged, and joyful.
+          </p>
+          <ul class="checklist">
+            <li>Purpose-built campus with bright, airy classrooms</li>
+            <li>Certified teachers with ongoing professional development</li>
+            <li>
+              Secure entry, health protocols, and dedicated wellbeing staff
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="academics" class="section muted">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Academics</p>
+              <h2>Rigorous, playful, and personalized</h2>
+              <p>
+                From early literacy to hands-on STEM, our curriculum invites
+                questions, creativity, and confidence. We honor each child's
+                pace with small-group instruction and enrichment.
+              </p>
+            </div>
+            <a class="btn ghost" href="contact.html">Talk with Academics</a>
+          </div>
+          <div class="card-grid three">
+            <article class="card">
+              <h3>Early Years (K–1)</h3>
+              <p>
+                Play-based foundations in reading, numeracy, social-emotional
+                skills, and sensory exploration.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Phonics</span
+                ><span class="chip">Nature walks</span
+                ><span class="chip">Music</span>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Elementary (2–4)</h3>
+              <p>
+                Project-based learning with STEM labs, maker time, art studio,
+                and daily reading workshop.
+              </p>
+              <div class="chip-row">
+                <span class="chip">STEM lab</span
+                ><span class="chip">Art studio</span
+                ><span class="chip">Readers workshop</span>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Upper (5–6)</h3>
+              <p>
+                Leadership, advanced math pathways, debate, coding, and capstone
+                showcases that prepare students for middle school.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Coding</span><span class="chip">Debate</span
+                ><span class="chip">Capstone</span>
+              </div>
+            </article>
+          </div>
+          <div class="learning-approach">
+            <div class="approach-card">
+              <h4>Learning approach</h4>
+              <ul class="checklist">
+                <li>Inquiry and project-based learning</li>
+                <li>STEM + arts integration</li>
+                <li>Social-emotional learning daily</li>
+                <li>Outdoor education and movement</li>
+                <li>Individual learning plans</li>
+              </ul>
+            </div>
+            <div class="approach-card">
+              <h4>Support & enrichment</h4>
+              <ul class="checklist">
+                <li>Reading specialists and tutoring</li>
+                <li>Math circles and robotics club</li>
+                <li>Speech and occupational therapy partners</li>
+                <li>Mindfulness and counseling support</li>
+                <li>Homework labs with teacher guidance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" class="section container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Admissions</p>
+            <h2>Simple, caring enrollment</h2>
+            <p>
+              We guide families step by step. Tours are friendly and
+              child-centered.
+            </p>
+          </div>
+          <div class="cta-stack">
+            <a class="btn primary" href="contact.html">Book a Tour</a>
+            <a
+              class="btn ghost"
+              href="assets/forms/Pebbles-Admissions-Packet.pdf"
+              download
+              >Download Forms</a
+            >
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div>
+              <h4>Visit & meet us</h4>
+              <p>
+                Schedule a campus tour to see classrooms, meet teachers, and
+                feel our community.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div>
+              <h4>Apply</h4>
+              <p>
+                Submit the application, previous records (if applicable), and
+                health forms.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div>
+              <h4>Experience day</h4>
+              <p>
+                Your child joins a class for a half-day visit to ensure a great
+                fit.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <div>
+              <h4>Welcome aboard</h4>
+              <p>
+                Receive placement, meet your teacher, and get your starter kit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="fees card">
+          <h3>Tuition & fees overview</h3>
+          <div class="fee-grid">
+            <div>
+              <p class="fee-label">Tuition</p>
+              <p class="fee-amount">$8,500 – $11,500 / year</p>
+            </div>
+            <div>
+              <p class="fee-label">Financial aid</p>
+              <p>Need-based assistance and sibling discounts available.</p>
+            </div>
+            <div>
+              <p class="fee-label">What's included</p>
+              <p>
+                Books, materials, STEM lab time, art studio supplies, and most
+                clubs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">Pebbles</div>
+          <p>Bright, caring learning for ages 5–12.</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul class="mini-list">
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="life.html">Life at School</a></li>
+            <li><a href="parents.html">Parents</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>123 Pebble Lane, Sunnybrook</p>
+          <p>Mon–Fri, 8:00 AM – 4:00 PM</p>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        © 2026 Pebbles Elementary School. All rights reserved.
+      </p>
+    </footer>
+
+    <div class="floating-mascot" aria-hidden="true">★</div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

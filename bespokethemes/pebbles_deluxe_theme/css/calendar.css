@@ -1,0 +1,232 @@
+/* CALENDAR */
+
+.element-calendar,
+.page-Generated-calendar #calendar {
+    font-family: "Lato", sans-serif;
+}
+
+.element-calendar .sj-fc-button,
+.page-Generated-calendar #calendar .sj-fc-button {
+    border-radius: 0;
+    font-size: 11px;
+    padding: 2px 8px;
+    color: #003f6b;
+    background: #fac649;
+    border: none;
+    border-left: 1px solid #cdae4f;
+}
+
+.element-calendar .sj-fc-button:hover,
+.page-Generated-calendar #calendar .sj-fc-button:hover {
+    background: #AB801A;
+}
+
+.element-calendar .sj-fc-button:first-child,
+.page-Generated-calendar #calendar .sj-fc-button:first-child {
+    border-left: none;
+}
+
+.element-calendar .sj-fc-state-active,
+.page-Generated-calendar #calendar .sj-fc-state-active {
+    color: #fff;
+    background: #2b598c;
+}
+
+.element-calendar .sj-fc-state-active:hover,
+.page-Generated-calendar #calendar .sj-fc-state-active:hover {
+    background: #12345A;
+}
+
+.element-calendar .fc-header-title,
+.page-Generated-calendar #calendar .fc-header-title {
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+.element-calendar .fc-header-title h2,
+.page-Generated-calendar #calendar .fc-header-title h2 {
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+.element-calendar .fc-button-prev,
+.element-calendar .fc-button-next,
+.page-Generated-calendar #calendar .fc-button-prev,
+.page-Generated-calendar #calendar .fc-button-next {
+    background: #006eb8;
+    color: white;
+    font-size: 1.2em;
+    line-height: 22px;
+    border-left: 2px solid #005691;
+}
+
+.element-calendar .fc-button-prev:hover,
+.element-calendar .fc-button-next:hover,
+.page-Generated-calendar #calendar .fc-button-prev:hover,
+.page-Generated-calendar #calendar .fc-button-next:hover {
+    background: #055E9A;
+}
+
+.element-calendar .fc-button-today,
+.page-Generated-calendar #calendar .fc-button-today {
+    color: white;
+    background: #2b598c;
+    border: none;
+}
+
+.element-calendar .fc-button-today:hover,
+.page-Generated-calendar #calendar .fc-button-today:hover {
+    background: #1b3e65;
+}
+
+.element-calendar table.fc-border-separate th,
+.page-Generated-calendar #calendar table.fc-border-separate th {
+    padding: 10px 8px;
+    color: white;
+    font-weight: normal;
+    font-size: 0.8em;
+    border: none;
+}
+
+.element-calendar table.fc-border-separate th.fc-mon,
+.element-calendar table.fc-border-separate th.fc-wed,
+.element-calendar table.fc-border-separate th.fc-fri,
+.element-calendar table.fc-border-separate th.fc-sun,
+.page-Generated-calendar #calendar table.fc-border-separate th.fc-mon,
+.page-Generated-calendar #calendar table.fc-border-separate th.fc-wed,
+.page-Generated-calendar #calendar table.fc-border-separate th.fc-fri,
+.page-Generated-calendar #calendar table.fc-border-separate th.fc-sun {
+    background: #0097d8;
+}
+
+.element-calendar table.fc-border-separate th.fc-tue,
+.element-calendar table.fc-border-separate th.fc-thu,
+.element-calendar table.fc-border-separate th.fc-sat,
+.page-Generated-calendar #calendar table.fc-border-separate th.fc-tue,
+.page-Generated-calendar #calendar table.fc-border-separate th.fc-thu,
+.page-Generated-calendar #calendar table.fc-border-separate th.fc-sat {
+    background: #009fe0;
+}
+
+.element-calendar .fc-day,
+.page-Generated-calendar #calendar .fc-day {
+    border: none;
+}
+
+.element-calendar .fc-week.odd .fc-day.odd,
+.element-calendar .fc-week.even .fc-day.even,
+.page-Generated-calendar #calendar,
+.page-Generated-calendar #calendar {
+    background: #e2eff7;
+}
+
+.element-calendar .fc-week.odd .fc-day.even,
+.element-calendar .fc-week.even .fc-day.odd,
+.page-Generated-calendar #calendar .fc-week.odd .fc-day.even,
+.page-Generated-calendar #calendar .fc-week.even .fc-day.odd {
+    background: #d6e4ed;
+}
+
+.element-calendar .fc-day-number,
+.page-Generated-calendar #calendar .fc-day-number {
+    color: #003f6b !important;
+    font-size: 12px;
+}
+
+.element-calendar .fc-event,
+.page-Generated-calendar #calendar .fc-event {
+    height: auto !important;
+    border-radius: 0 !important;
+    /*background: #0097d8 !important;*/
+    color: white !important;
+    padding: 2px;
+    /*border: 1px solid #009fe0 !important;*/
+}
+
+.element-calendar .fc-event .fc-event-time,
+.page-Generated-calendar #calendar .fc-event .fc-event-time {
+    font-weight: normal !important;
+    display: block;
+}
+
+.element-calendar .fc-header .fc-header-left > span,
+.element-calendar .fc-header .fc-header-right > span,
+.page-Generated-calendar #calendar .fc-header .fc-header-left > span,
+.page-Generated-calendar #calendar .fc-header .fc-header-right > span {
+    line-height: 22px;
+}
+
+.has-side-menu .column-left2col-1 .fc-header td,
+.has-side-menu .column-right2col-2 .fc-header td,
+.column-2col-1 .fc-header td,
+.column-2col-2 .fc-header td,
+.column-left2col-2 .fc-header td,
+.column-right2col-1 .fc-header td,
+.column-3col-1 .fc-header td,
+.column-3col-2 .fc-header td,
+.column-3col-3 .fc-header td {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.fc-header-left {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+}
+
+.fc-header-left span {
+    display: inline-block;
+}
+
+.fc-header td {
+    white-space: inherit;
+}
+
+.ie8 .column .fc-header td,
+.ie8 .column-left2col-1 .fc-header td,
+.ie8 .column-right2col-2 .fc-header td{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+
+.ie8 .column .fc-header td.fc-header-left,
+.ie8 .column-left2col-2 .fc-header td,
+.ie8 .column-right2col-1 .fc-header td,
+.ie8 .column-3col-1 .fc-header td,
+.ie8 .column-3col-2 .fc-header td,
+.ie8 .column-3col-3 .fc-header td{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.column-left2col-2 .fc-content th,
+.column-right2col-1 .fc-content th,
+.column-3col-1 .fc-content th,
+.column-3col-2 .fc-content th,
+.column-3col-3 .fc-content th {
+    padding: 10px 2px !important;
+}
+
+@media (max-width: 600px) {
+    .page-Generated-calendar #calendar .fc-header,
+    .page-Generated-calendar #calendar .fc-header tbody,
+    .page-Generated-calendar #calendar .fc-header tr,
+    .page-Generated-calendar #calendar .fc-header td {
+       display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .element-calendar table.fc-border-separate th,
+    .page-Generated-calendar #calendar table.fc-border-separate th {
+        padding: 8px 0;
+    }
+}
+/* END OF CALENDAR */
