@@ -82,7 +82,8 @@ if (
 
         if (in_array($file_ext, $allowed_ext)) {
             $filename = time() . '_' . uniqid() . '.' . $file_ext;
-            $upload_path = '../uploads/gallery/' . $filename;
+            $upload_dir = dirname(__DIR__) . '/uploads/gallery/';
+            $upload_path = $upload_dir . $filename;
 
             if (move_uploaded_file($_FILES['photo']['tmp_name'], $upload_path)) {
                 $photo_path = 'uploads/gallery/' . $filename;
@@ -592,7 +593,8 @@ if (isset($_GET['debug'])) {
                     echo '<div class="photo-grid" data-section-id="' . $section['id'] . '">';
                     while ($photo = $photos->fetch_assoc()) {
                         echo '<div class="photo-item draggable-item" draggable="true" data-id="' . $photo['id'] . '" data-section="' . $section['id'] . '">';
-                        echo '<img src="../' . htmlspecialchars($photo['photo_path']) . '" alt="' . htmlspecialchars($photo['photo_title']) . '">';
+                        // Stored path is relative to site root (uploads/gallery/...). Use it directly for browser src.
+                        echo '<img src="' . htmlspecialchars($photo['photo_path']) . '" alt="' . htmlspecialchars($photo['photo_title']) . '">';
                         echo '<a href="?page=gallery&edit_photo=' . $photo['id'] . '" class="delete-btn" style="background: rgba(0,0,0,0.6);">Edit</a>';
                         echo '<a href="?page=gallery&delete_photo=' . $photo['id'] . '" class="delete-btn" style="top: 36px;" onclick="return confirm(\'Delete this photo?\');">Delete</a>';
                         echo '</div>';
@@ -677,7 +679,9 @@ if (isset($_GET['debug'])) {
                     <label for="edit_photo">Replace Image (optional)</label>
                     <input type="file" id="edit_photo" name="photo" accept="image/*">
                     <div style="margin-top:10px; color:#666; font-size: 13px;">
-                        Current image: <img src="../<?php echo htmlspecialchars($edit_photo['photo_path']); ?>" style="max-width: 150px; max-height: 100px; border-radius: 5px; vertical-align: middle;">
+                        Current image:
+                        <img src="<?php echo htmlspecialchars($edit_photo['photo_path']); ?>" style="max-width: 150px; max-height: 100px; border-radius: 5px; vertical-align: middle;">
+                        <small style="display:block; color:#888; margin-top:4px;">Path: <?php echo htmlspecialchars($edit_photo['photo_path']); ?></small>
                     </div>
                 </div>
                 <div class="button-group">

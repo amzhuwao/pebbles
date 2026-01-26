@@ -1,5 +1,5 @@
 <?php
-include '../config.php';
+require_once dirname(__DIR__) . '/config.php';
 
 // Handle adding/updating article
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
             if (in_array($file_ext, $allowed_ext)) {
                 $filename = time() . '_' . uniqid() . '.' . $file_ext;
-                $upload_path = '../uploads/news/' . $filename;
+                $upload_dir = dirname(__DIR__) . '/uploads/news/';
+                $upload_path = $upload_dir . $filename;
 
                 if (move_uploaded_file($_FILES['featured_image']['tmp_name'], $upload_path)) {
                     $featured_image = 'uploads/news/' . $filename;
@@ -245,14 +246,14 @@ if (isset($error)) {
 ?>
 
 <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('articles')">All Articles</button>
-    <button class="tab-btn" onclick="switchTab('<?php echo $edit_article ? 'edit' : 'new'; ?>')">
+    <button class="tab-btn <?php echo $edit_article ? '' : 'active'; ?>" onclick="switchTab(event, 'articles')">All Articles</button>
+    <button class="tab-btn <?php echo $edit_article ? 'active' : ''; ?>" onclick="switchTab(event, 'new')">
         <?php echo $edit_article ? 'Edit Article' : 'New Article'; ?>
     </button>
 </div>
 
 <!-- Articles List Tab -->
-<div id="articles" class="tab-content active">
+<div id="articles" class="tab-content <?php echo $edit_article ? '' : 'active'; ?>">
     <div class="article-list">
         <?php
         if ($articles && $articles->num_rows > 0) {
@@ -262,7 +263,8 @@ if (isset($error)) {
 
                 echo '<div class="article-card">';
                 if ($article['featured_image']) {
-                    echo '<img src="../' . htmlspecialchars($article['featured_image']) . '" class="article-image" alt="' . htmlspecialchars($article['title']) . '">';
+                    $img_url = htmlspecialchars($article['featured_image']); // already stored as uploads/news/...
+                    echo '<img src="' . $img_url . '" class="article-image" alt="' . htmlspecialchars($article['title']) . '">';
                 } else {
                     echo '<div class="article-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">No Image</div>';
                 }
@@ -289,7 +291,7 @@ if (isset($error)) {
 </div>
 
 <!-- New/Edit Article Tab -->
-<div id="new" class="tab-content <?php echo !$edit_article ? 'active' : ''; ?>">
+<div id="new" class="tab-content <?php echo $edit_article ? 'active' : ''; ?>">
     <div class="form-container">
         <h3><?php echo $edit_article ? 'Edit Article' : 'Create New Article'; ?></h3>
         <form method="POST" enctype="multipart/form-data">
@@ -312,7 +314,11 @@ if (isset($error)) {
                 <label for="featured_image">Featured Image (Optional)</label>
                 <input type="file" id="featured_image" name="featured_image" accept="image/*">
                 <?php if ($edit_article && $edit_article['featured_image']): ?>
-                    <p style="margin-top: 10px; color: #666;">Current image: <img src="../<?php echo htmlspecialchars($edit_article['featured_image']); ?>" style="max-width: 150px; max-height: 100px; border-radius: 5px;"></p>
+                    <p style="margin-top: 10px; color: #666;">
+                        Current image:
+                        <img src="<?php echo htmlspecialchars($edit_article['featured_image']); ?>" style="max-width: 150px; max-height: 100px; border-radius: 5px;">
+                        <small style="display:block; color:#888; margin-top:4px;">Path: <?php echo htmlspecialchars($edit_article['featured_image']); ?></small>
+                    </p>
                 <?php endif; ?>
             </div>
 
@@ -338,14 +344,34 @@ if (isset($error)) {
     </div>
 </div>
 
-<div id="edit" class="tab-content <?php echo $edit_article ? 'active' : ''; ?>"></div>
-
 <script>
-    function switchTab(tabName) {
+    function switchTab(evt, tabName) {
         document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
 
-        document.getElementById(tabName).classList.add('active');
-        event.target.classList.add('active');
+        const targetTab = document.getElementById(tabName);
+        if (targetTab) {
+            targetTab.classList.add('active');
+        }
+        if (evt && evt.currentTarget) {
+            evt.currentTarget.classList.add('active');
+        }
     }
+</script>
+
+<!-- Rich text editor for article content (local TinyMCE) -->
+<script src="../vendor/tinymce/js/tinymce/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector: '#content',
+        menubar: false,
+        statusbar: false,
+        height: 420,
+        plugins: 'lists link image table code autosave',
+        toolbar: 'undo redo | bold italic underline | bullist numlist | link | table | removeformat | code',
+        branding: false,
+        autosave_interval: '30s',
+        default_link_target: '_blank',
+        link_default_protocol: 'https'
+    });
 </script>

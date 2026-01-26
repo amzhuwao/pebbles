@@ -215,6 +215,8 @@ $page = $_GET['page'] ?? 'dashboard';
                 <li><a href="?page=dashboard" class="<?php echo $page === 'dashboard' ? 'active' : ''; ?>">Dashboard</a></li>
                 <li><a href="?page=gallery" class="<?php echo $page === 'gallery' ? 'active' : ''; ?>">Gallery</a></li>
                 <li><a href="?page=news" class="<?php echo $page === 'news' ? 'active' : ''; ?>">News</a></li>
+                <li><a href="?page=newsletter" class="<?php echo $page === 'newsletter' ? 'active' : ''; ?>">Newsletters</a></li>
+                <li><a href="?page=events" class="<?php echo $page === 'events' ? 'active' : ''; ?>">Events</a></li>
             </ul>
             <div class="logout">
                 <a href="logout.php">Logout</a>
@@ -237,6 +239,10 @@ $page = $_GET['page'] ?? 'dashboard';
                 include 'pages/gallery.php';
             } elseif ($page === 'news') {
                 include 'pages/news.php';
+            } elseif ($page === 'newsletter') {
+                include 'pages/newsletter.php';
+            } elseif ($page === 'events') {
+                include 'pages/events.php';
             } else {
                 include 'pages/dashboard.php';
             }
