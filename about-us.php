@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 require_once __DIR__ . '/admin/config.php';
 
@@ -6,36 +5,11 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
     die('Database connection not available.');
 }
 
-// Fetch latest news
-$news_articles = [];
-$news_query = "SELECT * FROM news_articles WHERE is_published=1 ORDER BY publish_date DESC LIMIT 5";
+// Fetch published news articles (latest 5)
+$news_query = "SELECT id, title, content, publish_date FROM news_articles WHERE is_published = 1 ORDER BY publish_date DESC LIMIT 5";
 $news_result = $conn->query($news_query);
-if ($news_result) {
-    while ($row = $news_result->fetch_assoc()) {
-        $news_articles[] = $row;
-    }
-}
-
-// Fetch latest newsletters
-$newsletters = [];
-$newsletter_query = "SELECT * FROM newsletters WHERE is_sent=1 ORDER BY sent_date DESC LIMIT 4";
-$newsletter_result = $conn->query($newsletter_query);
-if ($newsletter_result) {
-    while ($row = $newsletter_result->fetch_assoc()) {
-        $newsletters[] = $row;
-    }
-}
-
-// Fetch upcoming events
-$events = [];
-$events_query = "SELECT * FROM events WHERE is_published=1 ORDER BY event_date ASC LIMIT 5";
-$events_result = $conn->query($events_query);
-if ($events_result) {
-    while ($row = $events_result->fetch_assoc()) {
-        $events[] = $row;
-    }
-}
 ?>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="ie lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="ie ie7"> <![endif]-->
 <!--[if IE 8]>         <html class="ie ie8"> <![endif]-->
@@ -51,11 +25,11 @@ if ($events_result) {
     <link href="./vendor/aos/aos.css" rel="stylesheet">
     <script src="./vendor/aos/aos.js"></script>
     <link type="text/css" href="./css/fermions-payload.css?v=1704724204" rel="stylesheet" />
-    <link type="text/css" href="./css/bosons-payload.css?v=1686342133" rel="stylesheet" />
-    <link type="text/css" href="./vendor/mediaelement/mediaelementplayer.min.css?v=1686342134" rel="stylesheet" />
-    <link type="text/css" href="./css/sj._cmsfrontend.css?v=1686342133" rel="stylesheet" />
-    <link type="text/css" href="./css/sj.sitesfrontend.css?v=1686342133" rel="stylesheet" />
-    <link type="text/css" href="./css/print.css?v=1686342133" rel="stylesheet" media="print" /><!--[if lt IE 10]><link type="text/css" href="./css/main.css?v=1686342133" rel="stylesheet" />
+    <link type="text/css" href="./css/bosons-payload.css?v=1686344492" rel="stylesheet" />
+    <link type="text/css" href="./vendor/mediaelement/mediaelementplayer.min.css?v=1686344493" rel="stylesheet" />
+    <link type="text/css" href="./css/sj._cmsfrontend.css?v=1686344492" rel="stylesheet" />
+    <link type="text/css" href="./css/sj.sitesfrontend.css?v=1686344492" rel="stylesheet" />
+    <link type="text/css" href="./css/print.css?v=1686344492" rel="stylesheet" media="print" /><!--[if lt IE 10]><link type="text/css" href="./css/main.css?v=1686344492" rel="stylesheet" />
 <![endif]-->
     <link type="text/css" id="theme-stylesheet" href="./bespokethemes/pebbles_deluxe_theme/css/core.css?v=1697188321" rel="stylesheet" />
     <link type="text/css" id="theme-stylesheet" href="./bespokethemes/pebbles_deluxe_theme/css/calendar.css?v=1697112485" rel="stylesheet" />
@@ -70,10 +44,10 @@ if ($events_result) {
         var i18nLang = 'en-gb';
     </script>
     <script type="text/javascript" src="./js/payloads/sun-payload.js?v=1748503802"></script>
-    <script type="text/javascript" src="./js/payloads/venus-payload.js?v=1732008002"></script>
-    <script type="text/javascript" src="./js/sj.sitesfrontend.js?v=1686342134"></script>
+    <script type="text/javascript" src="./js/payloads/venus-payload.js?v=1732008004"></script>
+    <script type="text/javascript" src="./js/sj.sitesfrontend.js?v=1686344493"></script>
     <!--[if lt IE 9]>
-                <script src="./vendor/html5shiv/html5shiv.js?v=1686342134"></script>
+                <script src="./vendor/html5shiv/html5shiv.js?v=1686344493"></script>
                 <script src="./ui/vendor/respond/respond.min.js"></script>
                 <link href="./vendor/respond/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
                 <link href="./ui/vendor/respond/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
@@ -86,14 +60,14 @@ if ($events_result) {
     <script type="text/javascript" src="./bespokethemes/pebbles_deluxe_theme/js/slick.min.js?v=1697112486"></script>
     <script type="text/javascript" src="./bespokethemes/pebbles_deluxe_theme/js/page-load.js?v=1697112486"></script>
     <script type="text/javascript" src="./bespokethemes/pebbles_deluxe_theme/js/aos-config.js?v=1697112486"></script>
-    <title>Pebbles Elementary - Parents</title>
-    <link rel="canonical" href=".//parents" />
+    <title>Pebbles Elementary - About Us</title>
+    <link rel="canonical" href=".//about-us" />
     <meta name="custom_styles" content="[]" />
     <meta name="static_url" content="./" />
     <meta name="cdn_img_url" content="https://img.cdn.schooljotter2.com/" />
 </head>
 
-<body class="page-parents app-site pebbles_deluxe_theme tenant-type-unknown sj sj_preview has-side-menu">
+<body class="page-about-us app-site pebbles_deluxe_theme tenant-type-unknown sj sj_preview has-side-menu">
     <div class="popup-wrapper" style="display: none;">
         <div class="popup-box"><i class="fa fa-times-circle" id="closepop"></i></div>
     </div>
@@ -203,12 +177,12 @@ if ($events_result) {
                                 <ul class='root dropdown'>
                                     <li class="item1 first-item"><a href="index.html">Home</a></li>
                                     <li class="item2"><a href="key-information.html">Key Information</a></li>
-                                    <li class="item3 parent"><a href="about-us.html">About Us</a>
+                                    <li class="item3 current-item-root parent current-item"><a href="about-us.php">About Us</a>
                                         <ul>
-                                            <li class="item1"><a href="about-us.html#staff">Staff</a></li>
+                                            <li class="item1"><a href="about-us.php#staff">Staff</a></li>
                                         </ul>
                                     </li>
-                                    <li class="item4 current-item-root current-item"><a href="parents.php">Parents</a></li>
+                                    <li class="item4"><a href="parents.html">Parents</a></li>
                                     <li class="item5"><a href="contact-us.html">Contact Us</a></li>
                                     <li class="item6"><a href="news.php">News</a></li>
                                     <li class="item7 last-item"><a href="gallery.php">Gallery</a></li>
@@ -236,12 +210,12 @@ if ($events_result) {
                                     <ul class='root standard'>
                                         <li class="item1 first"><a href="index.html">Home</a></li>
                                         <li class="item2"><a href="key-information.php">Key Information</a></li>
-                                        <li class="item3 parent"><a href="about-us.html">About Us</a>
+                                        <li class="item3 current-item-root parent current"><a href="about-us.php">About Us</a>
                                             <ul>
-                                                <li class="item1 first last"><a href="about-us.html#staff">Staff</a></li>
+                                                <li class="item1 first last"><a href="about-us.php#staff">Staff</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item4 current-item-root current"><a href="parents.php">Parents</a></li>
+                                        <li class="item4"><a href="parents.html">Parents</a></li>
                                         <li class="item5"><a href="contact-us.html">Contact Us</a></li>
                                         <li class="item6"><a href="news.php">News</a></li>
                                         <li class="item7 last"><a href="gallery.php">Gallery</a></li>
@@ -291,84 +265,54 @@ if ($events_result) {
                         <div id="sj-outer-row-id-1" class="bs3-clearfix sj-outer-row sj-outer-row-1 sj-outer-row-odd">
                             <div class="bs3-clearfix sj-content-row sj-content-row-1 sj-content-row-odd">
                                 <div class="column column-1col">
-                                    <div id="element_125293573" class="element element-text">
-                                        <h2 style="text-align: center;">Parents</h2>
-                                        <p style="text-align: center;">This is an example of a Parent's page. Examples of things you would find on this page could be newsletters, upcoming events, calendars etc.</p>
-                                        <p style="text-align: center;">Below are some examples of features you can add in Jotter:</p>
+                                    <div id="element_125293555" class="element element-text">
+                                        <h2 style="text-align: center;">About Us</h2>
+                                        <p style="text-align: center;">Our school is a caring and inclusive learning community where every child is valued, supported, and encouraged to reach their full potential. We provide a safe, stimulating environment that nurtures curiosity, confidence, and a love of learning.
+
+                                            <br> Through a balanced curriculum and a wide range of activities, we focus on developing academic skills, creativity, good character, and respect for others. Our dedicated staff work closely with parents and the wider community to ensure that every learner feels happy, secure, and inspired each day.
+
+                                            <br> We are proud of our school culture, where kindness, responsibility, and achievement are celebrated, and where children are prepared not only for the next stage of education, but for life beyond the classroom.
+                                        </p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sj-outer-row-id-2" class="bs3-clearfix sj-outer-row sj-outer-row-2 sj-outer-row-even">
-                            <div class="bs3-clearfix sj-content-row sj-content-row-2 sj-content-row-even">
-                                <div class="column column-3col-1">
-                                    <div id="element_125293574" class="element element-news">
-                                        <div class="sj_element_news ">
+                                    <div id="element_125293556" class="element element-events">
+                                        <div class="sj_element_events ">
+                                            <h3>Latest School calendar Events</h3>
+                                            <dl class="sj_events sj_event">
+                                                <dt><span class="sj-event-title">Example Event Title</span><small class="sj-event-image"><span class="day">19</span><span class="month">Oct</span><span class="year">2023</span></small>
+                                                <dd>
+                                                    <p class="events-time"><small> 4:00 pm - 13 oct, 4:30 pm</small></p>
+                                                    <p class="events-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus venenatis ligula ac viverra. Cras sed purus in eros egestas vulputate luctus nec eros. Praesent id lacus id tortor consequat semper. Pellentesque magna ipsum, rutrum volutpat porttitor non, venenatis eget eros. Curabitur nec arcu augue. Vivamus nec auctor risus, et aliquet orci. Donec nec luctus velit. Nulla hendrerit ante quis mauris fringilla malesuada. Vestibulum et nisl risus. Vestibulum dignissim mi quis tortor laoreet faucibus. Nunc quis pulvinar velit, ut bibendum orci.</p>
+                                                </dd>
+                                                </dt>
+                                            </dl><span class="events-footer">Calendars page(s): <a href="/pages/calendar/index?calendar_id=8798">School calendar >></a></span>
+                                        </div>
+                                    </div>
+                                    <div id="element_125293557" class="element element-news">
+                                        <div class="sj_element_news">
                                             <h2 class="news_title">Latest News</h2>
-                                            <h3>
+                                            <h3><a href="/pages/news/rss" class="feedlink" target="_blank"><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-rss fa-stack-1x fa-inverse"></i></span></a>
                                                 <div class="clear"></div>
                                             </h3>
                                             <ul>
-                                                <?php if (!empty($news_articles)): ?>
-                                                    <?php foreach ($news_articles as $article): ?>
-                                                        <li>
-                                                            <div class="sj_news_link"><a href="#"><?php echo htmlspecialchars($article['title']); ?></a></div>
-                                                            <div class="sj_news_text"><?php echo substr(strip_tags($article['content']), 0, 150) . '...'; ?></div>
-                                                        </li>
-                                                    <?php endforeach; ?>
-                                                <?php else: ?>
-                                                    <li>
-                                                        <div class="sj_news_text">No news articles available.</div>
-                                                    </li>
-                                                <?php endif; ?>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column column-3col-2">
-                                    <div id="element_125293575" class="element element-newsletters">
-                                        <div class="sj_element_newsletters">
-                                            <h3>Latest Newsletters</h3>
-                                            <ul class="unstyled feed">
-                                                <?php if (!empty($newsletters)): ?>
-                                                    <?php foreach ($newsletters as $newsletter): ?>
-                                                        <?php $sent_date = strtotime($newsletter['sent_date']); ?>
-                                                        <li>
-                                                            <small>
-                                                                <span class="day"><?php echo date('d', $sent_date); ?></span>
-                                                                <span class="month"><?php echo date('M', $sent_date); ?></span>
-                                                                <span class="year"><?php echo date('Y', $sent_date); ?></span>
-                                                            </small><br>
-                                                            <strong><a href="#" title="<?php echo htmlspecialchars($newsletter['title']); ?>"><?php echo htmlspecialchars($newsletter['title']); ?></a></strong>
-                                                            <p></p>
-                                                        </li>
-                                                    <?php endforeach; ?>
-                                                <?php else: ?>
-                                                    <li>No newsletters available.</li>
-                                                <?php endif; ?>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column column-3col-3">
-                                    <div id="element_125293576" class="element element-events">
-                                        <div class="sj_element_events ">
-                                            <h3>Upcoming School Events</h3>
-                                            <?php if (!empty($events)): ?>
-                                                <dl class="sj_events sj_event">
-                                                    <?php foreach ($events as $event): ?>
-                                                        <?php $event_date = strtotime($event['event_date']); ?>
-                                                        <dt><span class="sj-event-title"><?php echo htmlspecialchars($event['event_name']); ?></span><small class="sj-event-image"><span class="day"><?php echo date('d', $event_date); ?></span><span class="month"><?php echo date('M', $event_date); ?></span><span class="year"><?php echo date('Y', $event_date); ?></span></small>
-                                                        <dd>
-                                                            <p class="events-time"><small><?php echo date('g:i A', $event_date); ?> - <?php echo htmlspecialchars($event['event_location']); ?></small></p>
-                                                            <p class="events-description"><?php echo htmlspecialchars(substr($event['event_description'], 0, 200)) . '...'; ?></p>
-                                                        </dd>
-                                                        </dt>
-                                                    <?php endforeach; ?>
-                                                </dl>
-                                            <?php else: ?>
-                                                <p>No upcoming events.</p>
-                                            <?php endif; ?>
+                                                <?php
+                                                if ($news_result && $news_result->num_rows > 0) {
+                                                    while ($news = $news_result->fetch_assoc()) {
+                                                        // Strip HTML tags and limit text to first 200 characters for preview
+                                                        $preview_text = strip_tags($news['content']);
+                                                        if (strlen($preview_text) > 200) {
+                                                            $preview_text = substr($preview_text, 0, 200) . '...';
+                                                        }
+
+                                                        echo '<li>';
+                                                        echo '<div class="sj_news_link"><a href="news-article.php?id=' . $news['id'] . '">' . htmlspecialchars($news['title']) . '</a></div>';
+                                                        echo '<div class="sj_news_text">' . htmlspecialchars($preview_text) . '</div>';
+                                                        echo '</li>';
+                                                    }
+                                                } else {
+                                                    echo '<li><div class="sj_news_text">No news articles available at this time.</div></li>';
+                                                }
+                                                ?>
+                                            </ul><a href="news.php">Further Articles &raquo;</a>
                                         </div>
                                     </div>
                                 </div>
@@ -394,20 +338,10 @@ if ($events_result) {
                     <!--end of footer-inner -->
                 </div>
                 <div class="awards-inner">
-                    <div class="footer-images"><img src="./img/cdn/footer-1-1200x200.jpg" /><img src="./img/cdn/footer-2-1200x200.jpg" /><img src="./img/cdn/footer-3-1200x200.jpg" /><img src="./img/cdn/footer-4-1200x200.jpg" /></div>
+                    <div class="footer-images"><img src="https://img.cdn.schooljotter2.com/sampled/13099468/1200/200/nocrop//" /><img src="https://img.cdn.schooljotter2.com/sampled/13099467/1200/200/nocrop//" /><img src="https://img.cdn.schooljotter2.com/sampled/13099470/1200/200/nocrop//" /><img src="https://img.cdn.schooljotter2.com/sampled/13099469/1200/200/nocrop//" /></div>
                 </div>
                 <div class="copyright">
-                    <span class="theme-copyright">&copy; 2026 Pebbles Elementary</span>.<br /><span class="theme-created-by">
-                        <a href="./admin/index.php">Administer Site</a></span>
-                    <script type="text/javascript">
-                        var disableStr = "ga-disable-wa-cookie-warning";
-                        if (
-                            typeof $.cookie("analitics_enabled") === "undefined" ||
-                            $.cookie("analitics_enabled") !== "1"
-                        ) {
-                            window[disableStr] = true;
-                        }
-                    </script>
+                    <span class="theme-copyright">&copy; 2026 Pebbles Elementary</span>.<br><span class="theme-created-by"> Our <a href="https://www.schooljotter.com/school-websites/" target="_blank" rel="nofollow">school website</a> is created using <a href="https://www.schooljotter.com/" target="_blank" rel="nofollow">School Jotter</a>, a <a href="https://www.webanywhere.co.uk" rel="nofollow" target="_blank">Webanywhere</a> product.&nbsp;[<a href="https://themes.home.schooljotter2.com">Administer Site</a>]</span>
                     <script type="text/javascript">
                         var disableStr = 'ga-disable-wa-cookie-warning';
                         if (typeof $.cookie('analitics_enabled') === 'undefined' || $.cookie('analitics_enabled') !== '1') {
@@ -521,7 +455,7 @@ if ($events_result) {
                             var ws = document.createElement("script");
                             ws.type = "text/javascript";
                             ws.async = true;
-                            ws.src = "https://stats.sites.schooljotter2.com/32561/1387246/hits.js?v=" + Math.random();
+                            ws.src = "https://stats.sites.schooljotter2.com/32561/1387244/hits.js?v=" + Math.random();
                             var s = document.getElementsByTagName("script")[0];
                             s.parentNode.insertBefore(ws, s);
                         })();
@@ -540,3 +474,9 @@ if ($events_result) {
 </body>
 
 </html>
+<?php
+// Close database connection
+if (isset($conn)) {
+    $conn->close();
+}
+?>

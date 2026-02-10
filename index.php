@@ -1,17 +1,14 @@
 <!doctype html>
 <?php
-// Database configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '@Fl011326');
-define('DB_NAME', 'pebbles_elementary');
+// Enable error display for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
 
-// Connect to database
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+require_once __DIR__ . '/admin/config.php';
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if (!isset($conn) || !($conn instanceof mysqli)) {
+  die('Database connection not available.');
 }
 ?>
 <!--[if lt IE 7]>      <html class="ie lt-ie7"> <![endif]-->
@@ -325,7 +322,7 @@ if ($conn->connect_error) {
                     <a href="key-information.html">Key Information</a>
                   </li>
                   <li class="item3 parent">
-                    <a href="about-us.html">About Us</a>
+                    <a href="about-us.php">About Us</a>
 
                   </li>
                   <li class="item4">
@@ -334,7 +331,10 @@ if ($conn->connect_error) {
                   <li class="item5">
                     <a href="contact-us.html">Contact Us</a>
                   </li>
-                  <li class="item6 last-item">
+                  <li class="item6">
+                    <a href="news.php">News</a>
+                  </li>
+                  <li class="item7 last-item">
                     <a href="gallery.php">Gallery</a>
                   </li>
                 </ul>
@@ -364,10 +364,10 @@ if ($conn->connect_error) {
                       <a href="index.html">Home</a>
                     </li>
                     <li class="item2">
-                      <a href="key-information.html">Key Information</a>
+                      <a href="key-information.php">Key Information</a>
                     </li>
                     <li class="item3 parent">
-                      <a href="about-us.html">About Us</a>
+                      <a href="about-us.php">About Us</a>
                       <ul>
                         <li class="item1 first last">
                           <a href="#">Staff</a>
@@ -380,7 +380,10 @@ if ($conn->connect_error) {
                     <li class="item5">
                       <a href="contact-us.html">Contact Us</a>
                     </li>
-                    <li class="item6 last">
+                    <li class="item6">
+                      <a href="news.php">News</a>
+                    </li>
+                    <li class="item7 last">
                       <a href="gallery.php">Gallery</a>
                     </li>
                   </ul>
@@ -448,9 +451,6 @@ if ($conn->connect_error) {
         </div>
       </div>
       <div class="content-wrapper wrapper">
-        <ol class="bs3-breadcrumb">
-          <li class="bs3-active">Home</li>
-        </ol>
         <div class="content-inner inner">
           <div class="content">
             <div
@@ -486,7 +486,7 @@ if ($conn->connect_error) {
                     </p>
                     <p style="text-align: left">
                       <br /><span style="font-weight: 400">If you have any problems or questions you can contact
-                        our support team on </span><a href="mailto:info@pebbleselementary.ac.zw"><span style="font-weight: 400">info@pebbleselementary.ac.zw</span></a><span style="font-weight: 400"> 24 hours a day.</span>
+                        our support team on </span><a href="mailto:info@pebbleselementary.co.zw"><span style="font-weight: 400">info@pebbleselementary.co.zw</span></a><span style="font-weight: 400"> 24 hours a day.</span>
                     </p>
                     <!-- <ul>
                         <li style="text-align: justify">
@@ -558,7 +558,7 @@ if ($conn->connect_error) {
                   <div id="element_126031432" class="element element-image">
                     <div class="sj_element_image">
                       <div id="sj_element_image_126031432">
-                        <a href="about-us.html"><img
+                        <a href="about-us.php"><img
                             src="./img/assets/ql3---hedgehog.png"
                             alt="About Us"
                             title="About Us"

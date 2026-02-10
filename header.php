@@ -1,17 +1,5 @@
 <?php
-// Database configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '@Fl011326');
-define('DB_NAME', 'pebbles_elementary');
-
-// Connect to database
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once __DIR__ . '/admin/config.php';
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="ie lt-ie7"> <![endif]-->
@@ -264,10 +252,10 @@ if ($conn->connect_error) {
                                         <a href="index.php">Home</a>
                                     </li>
                                     <li class="item2">
-                                        <a href="key-information.html">Key Information</a>
+                                        <a href="key-information.php">Key Information</a>
                                     </li>
                                     <li class="item3 parent">
-                                        <a href="about-us.html">About Us</a>
+                                        <a href="about-us.php">About Us</a>
                                     </li>
                                     <li class="item4">
                                         <a href="parents.php">Parents</a>
@@ -275,7 +263,10 @@ if ($conn->connect_error) {
                                     <li class="item5">
                                         <a href="contact-us.html">Contact Us</a>
                                     </li>
-                                    <li class="item6 last-item current-item">
+                                    <li class="item6">
+                                        <a href="news.php">News</a>
+                                    </li>
+                                    <li class="item7 last-item current-item">
                                         <a href="gallery.php">Gallery</a>
                                     </li>
                                 </ul>
@@ -303,10 +294,10 @@ if ($conn->connect_error) {
                                             <a href="index.php">Home</a>
                                         </li>
                                         <li class="item2">
-                                            <a href="key-information.html">Key Information</a>
+                                            <a href="key-information.php">Key Information</a>
                                         </li>
                                         <li class="item3 parent">
-                                            <a href="about-us.html">About Us</a>
+                                            <a href="about-us.php">About Us</a>
                                         </li>
                                         <li class="item4">
                                             <a href="parents.html">Parents</a>
@@ -314,7 +305,10 @@ if ($conn->connect_error) {
                                         <li class="item5">
                                             <a href="contact-us.html">Contact Us</a>
                                         </li>
-                                        <li class="item6 last">
+                                        <li class="item6">
+                                            <a href="news.php">News</a>
+                                        </li>
+                                        <li class="item7 last">
                                             <a href="gallery.php">Gallery</a>
                                         </li>
                                     </ul>
@@ -359,8 +353,6 @@ if ($conn->connect_error) {
                 </div>
             </div>
             <div class="content-wrapper wrapper">
-                <ol class="bs3-breadcrumb">
-                    <li class="bs3-active">Gallery</li>
-                </ol>
+
                 <div class="content-inner inner">
                     <div class="content">

@@ -1,4 +1,9 @@
 <?php
+// Start session first, before any output
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
@@ -27,8 +32,3 @@ if ($conn->connect_error) {
 
 // Set charset
 $conn->set_charset("utf8");
-
-// Start session if not already started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}

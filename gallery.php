@@ -2,6 +2,10 @@
 // Include config for database connection
 require_once __DIR__ . '/admin/config.php';
 
+if (!isset($conn) || !($conn instanceof mysqli)) {
+    die('Database connection not available.');
+}
+
 // Fetch all gallery sections with their photos
 $sections = $conn->query("SELECT * FROM gallery_sections ORDER BY display_order");
 $gallery_data = [];
