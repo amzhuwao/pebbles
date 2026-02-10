@@ -139,7 +139,7 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
     src="./bespokethemes/pebbles_deluxe_theme/js/aos-config.js"></script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
   <title>Pebbles Elementary - Home</title>
-  <link rel="canonical" href="index.html" />
+  <link rel="canonical" href="index.php" />
   <meta name="custom_styles" content="[]" />
   <meta name="static_url" content="https./" />
   <meta name="cdn_img_url" content="" />
@@ -301,7 +301,7 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
 
           <div class="header-details">
             <div class="school-details">
-              <a href="index.html" class="logo-link">
+              <a href="index.php" class="logo-link">
                 <div class="theme-school-logo">
                   <img src="./img/cdn/logo.png" />
                 </div>
@@ -319,7 +319,7 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
                     <a href="index.php">Home</a>
                   </li>
                   <li class="item2">
-                    <a href="key-information.html">Key Information</a>
+                    <a href="key-information.php">Key Information</a>
                   </li>
                   <li class="item3 parent">
                     <a href="about-us.php">About Us</a>
@@ -361,7 +361,7 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
                 <div class="nav-mobile-inner">
                   <ul class="root standard">
                     <li class="item1 current-item-root first current">
-                      <a href="index.html">Home</a>
+                      <a href="index.php">Home</a>
                     </li>
                     <li class="item2">
                       <a href="key-information.php">Key Information</a>
@@ -375,7 +375,7 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
                       </ul>
                     </li>
                     <li class="item4">
-                      <a href="parents.html">Parents</a>
+                      <a href="parents.php">Parents</a>
                     </li>
                     <li class="item5">
                       <a href="contact-us.html">Contact Us</a>
@@ -481,7 +481,7 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
                   <div id="element_126031425" class="element element-text">
                     <h1>Welcome Message</h1>
                     <p>
-                      <span style="font-weight: 400">Welcome to Pebbl Elementary School. This website is designed to give families a warm introduction to our school community and to highlight the activities, values, and learning experiences we offer. Beyond these pages, you will discover a digital window into our classrooms, where we celebrate student growth and keep our families deeply connected to the heartbeat of our school. Whether you are looking for important updates or a glimpse into your child's creative projects, this space is built to support our shared mission: fostering a joyful, inclusive environment where every learner can thrive.
+                      <span style="font-weight: 400">Welcome to Pebbles Elementary School. This website is designed to give families a warm introduction to our school community and to highlight the activities, values, and learning experiences we offer. Beyond these pages, you will discover a digital window into our classrooms, where we celebrate student growth and keep our families deeply connected to the heartbeat of our school. Whether you are looking for important updates or a glimpse into your child's creative projects, this space is built to support our shared mission: fostering a joyful, inclusive environment where every learner can thrive.
                       </span>
                     </p>
                     <p style="text-align: left">
@@ -686,8 +686,8 @@ if (!isset($conn) || !($conn instanceof mysqli)) {
                         SJ.CMSFrontend.Elements.map(
                           "sj_element_map_126031426",
                           "",
-                          "53.796790",
-                          "-1.545300",
+                          "-17.899611",
+                          "31.039472",
                         );
                       </script>
                     </div>

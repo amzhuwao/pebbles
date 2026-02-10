@@ -415,7 +415,7 @@ $events_result = $conn->query($events_query);
 
           <div class="header-details">
             <div class="school-details">
-              <a href="index.html" class="logo-link">
+              <a href="index.php" class="logo-link">
                 <div class="theme-school-logo">
                   <img
                     src="https://img.cdn.schooljotter2.com/sampled/12213295/125/125/nocrop//" />
@@ -434,7 +434,7 @@ $events_result = $conn->query($events_query);
                     <a href="index.php">Home</a>
                   </li>
                   <li class="item2 current-item-root current-item">
-                    <a href="key-information.html">Key Information</a>
+                    <a href="key-information.php">Key Information</a>
                   </li>
                   <li class="item3 parent">
                     <a href="about-us.php">About Us</a>
@@ -479,7 +479,7 @@ $events_result = $conn->query($events_query);
                   <ul class="root standard">
                     <li class="item1 first"><a href="index.php">Home</a></li>
                     <li class="item2 current-item-root current">
-                      <a href="key-information.html">Key Information</a>
+                      <a href="key-information.php">Key Information</a>
                     </li>
                     <li class="item3 parent">
                       <a href="about-us.php">About Us</a>

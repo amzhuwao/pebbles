@@ -189,7 +189,7 @@ if ($events_result) {
 
                     <div class="header-details">
                         <div class="school-details">
-                            <a href="index.html" class="logo-link">
+                            <a href="index.php" class="logo-link">
                                 <div class="theme-school-logo"><img src="https://img.cdn.schooljotter2.com/sampled/12213295/125/125/nocrop//" /></div>
                             </a>
                             <div class="site-name-strap">
@@ -201,11 +201,11 @@ if ($events_result) {
                             <div class="nav">
 
                                 <ul class='root dropdown'>
-                                    <li class="item1 first-item"><a href="index.html">Home</a></li>
-                                    <li class="item2"><a href="key-information.html">Key Information</a></li>
-                                    <li class="item3 parent"><a href="about-us.html">About Us</a>
+                                    <li class="item1 first-item"><a href="index.php">Home</a></li>
+                                    <li class="item2"><a href="key-information.php">Key Information</a></li>
+                                    <li class="item3 parent"><a href="about-us.php">About Us</a>
                                         <ul>
-                                            <li class="item1"><a href="about-us.html#staff">Staff</a></li>
+                                            <li class="item1"><a href="about-us.php#staff">Staff</a></li>
                                         </ul>
                                     </li>
                                     <li class="item4 current-item-root current-item"><a href="parents.php">Parents</a></li>
@@ -234,11 +234,11 @@ if ($events_result) {
                                 <div class="nav-mobile-inner">
 
                                     <ul class='root standard'>
-                                        <li class="item1 first"><a href="index.html">Home</a></li>
+                                        <li class="item1 first"><a href="index.php">Home</a></li>
                                         <li class="item2"><a href="key-information.php">Key Information</a></li>
-                                        <li class="item3 parent"><a href="about-us.html">About Us</a>
+                                        <li class="item3 parent"><a href="about-us.php">About Us</a>
                                             <ul>
-                                                <li class="item1 first last"><a href="about-us.html#staff">Staff</a></li>
+                                                <li class="item1 first last"><a href="about-us.php#staff">Staff</a></li>
                                             </ul>
                                         </li>
                                         <li class="item4 current-item-root current"><a href="parents.php">Parents</a></li>
@@ -311,7 +311,20 @@ if ($events_result) {
                                             <ul>
                                                 <?php if (!empty($news_articles)): ?>
                                                     <?php foreach ($news_articles as $article): ?>
+                                                        <?php
+                                                        $publish_date_value = !empty($article['publish_date'])
+                                                            ? $article['publish_date']
+                                                            : (!empty($article['created_at']) ? $article['created_at'] : null);
+                                                        $publish_date = $publish_date_value ? strtotime($publish_date_value) : null;
+                                                        ?>
                                                         <li>
+                                                            <?php if ($publish_date): ?>
+                                                                <small class="sj_news_date">
+                                                                    <span class="day"><?php echo date('d', $publish_date); ?></span>
+                                                                    <span class="month"><?php echo date('M', $publish_date); ?></span>
+                                                                    <span class="year"><?php echo date('Y', $publish_date); ?></span>
+                                                                </small>
+                                                            <?php endif; ?>
                                                             <div class="sj_news_link"><a href="#"><?php echo htmlspecialchars($article['title']); ?></a></div>
                                                             <div class="sj_news_text"><?php echo substr(strip_tags($article['content']), 0, 150) . '...'; ?></div>
                                                         </li>

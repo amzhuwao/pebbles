@@ -109,7 +109,7 @@ require_once __DIR__ . '/admin/config.php';
         src="./bespokethemes/pebbles_deluxe_theme/js/aos-config.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
     <title>Gallery - Pebbles Elementary</title>
-    <link rel="canonical" href="gallery.html" />
+    <link rel="canonical" href="gallery.php" />
 </head>
 
 <body
@@ -300,7 +300,7 @@ require_once __DIR__ . '/admin/config.php';
                                             <a href="about-us.php">About Us</a>
                                         </li>
                                         <li class="item4">
-                                            <a href="parents.html">Parents</a>
+                                            <a href="parents.php">Parents</a>
                                         </li>
                                         <li class="item5">
                                             <a href="contact-us.html">Contact Us</a>
